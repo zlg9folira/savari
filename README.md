@@ -7,7 +7,7 @@ This package publishes ROS topics related to the content of basic-safety-message
 - vehicle general information (length, height, mass, class, etc.)
 - vehicle live sensory information (light/wiper/signal status, brake/throttle status, etc.)
 - vehicle path history information (if provided)
-- Message interval rate (beaconing rate -Hz-)
+- bsm interval rate (beaconing rate -Hz-)
 - vehicle GPS information (lattitude, longitude, GPS time, speed, etc.)
 
 The information can be for self vehicle (the OBU which the ROS client node runs on) and/or the ego vehicle (the OBU which is installed on other vehicle from which BSM messages are periodically received by self vehicle). 
