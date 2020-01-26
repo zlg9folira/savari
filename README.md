@@ -10,7 +10,7 @@ This package publishes ROS topics related to the content of basic-safety-message
 - bsm interval rate (beaconing rate -Hz-)
 - vehicle GPS information (lattitude, longitude, GPS time, speed, etc.)
 
-The information can be for self vehicle (the OBU which the ROS client node runs on) and/or the ego vehicle (the OBU which is installed on other vehicle from which BSM messages are periodically received by self vehicle). 
+The information can be for self vehicle (the OBU which the ROS client node runs on) and/or the ego vehicle (the OBU which is installed on other vehicle from which BSMs are periodically received by self vehicle). 
 
 <p align="center">
   <img src="/image/Header.jpg">
