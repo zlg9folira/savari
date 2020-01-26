@@ -17,7 +17,7 @@ The information can be for self vehicle (the OBU which the ROS client node runs 
 </p>
 
 **What is DSRC?**
-DSRC is is “a two-way short-to-medium-range wireless communications capability that permits very high data transmission critical in communications-based active safety applications,” according to the U.S. [Department of Transportation’s Intelligent Transportation][https://www.its.dot.gov/factsheets/dsrc_factsheet.htm] Systems Joint Program Office. DSRC is provided with 75 MHz of spectrum around the 5.9 GHz band (5.850-5.925 GHz) band to be used for vehicle-related safety and mobility systems. A number of DSRC applications have been envisioned:
+DSRC is is “a two-way short-to-medium-range wireless communications capability that permits very high data transmission critical in communications-based active safety applications,” according to the U.S. [https://www.its.dot.gov/factsheets/dsrc_factsheet.htm][Department of Transportation’s Intelligent Transportation] Systems Joint Program Office. DSRC is provided with 75 MHz of spectrum around the 5.9 GHz band (5.850-5.925 GHz) band to be used for vehicle-related safety and mobility systems. A number of DSRC applications have been envisioned:
 
 * Collision avoidance
 * Transit vehicle refueling management
@@ -28,7 +28,7 @@ DSRC is is “a two-way short-to-medium-range wireless communications capability
 * Rental car payments and processing
 * Pedestrian safety at intersections
 
-[Read more here!][https://www.rcrwireless.com/20151020/featured/what-is-dsrc-for-the-connected-car-tag6]
+[https://www.rcrwireless.com/20151020/featured/what-is-dsrc-for-the-connected-car-tag6][Read more here!]
 
 ## Dependencies
 
