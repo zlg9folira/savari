@@ -13,7 +13,7 @@ This package publishes ROS topics related to the content of basic-safety-message
 The information can be for self vehicle (the OBU which the ROS node runs on) and/or the ego vehicle (the OBU which is installed on other vehicle from which BSM messages are periodically received by self vehicle). 
 
 <p align="center">
-  <img src="Header.jpg">
+  <img src="/image/Header.jpg">
 </p>
 
 **What is DSRC?**
