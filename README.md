@@ -37,6 +37,24 @@ DSRC is is “a two-way short-to-medium-range wireless communications capability
 * sensor_msgs/NavSatFix ([http://wiki.ros.org/sensor_msgs][link])
 * savari_msgs ([https://github.com/zlg9folira/savari_msgs][link])
 
+## Publishes
+```sh
+- /savari_ros/self/fix (sensor_msgs/NavSatFix)
+- /savari_ros/self/gps (savari_msgs/Gps)
+- /savari_ros/self/vehicle (savari_msgs/Vehicle)
+- /savari_ros/self/path (savari_msgs/Path)
+
+- /savari_ros/ego/fix (sensor_msgs/NavSatFix)
+- /savari_ros/ego/gps (savari_msgs/Gps)
+- /savari_ros/ego/vehicle (savari_msgs/Vehicle)
+- /savari_ros/ego/path (savari_msgs/Path)
+```
+
+## Subscribes to
+```sh
+- /*   None  */
+```
+
 ## Building the ROS Node
 
 * Change directory to `/src` of your catkin workspace and clone:
