@@ -28,14 +28,14 @@ DSRC is is “a two-way short-to-medium-range wireless communications capability
 * Rental car payments and processing
 * Pedestrian safety at intersections
 
-[https://www.rcrwireless.com/20151020/featured/what-is-dsrc-for-the-connected-car-tag6][Read more here!]
+[Read more here!](https://www.rcrwireless.com/20151020/featured/what-is-dsrc-for-the-connected-car-tag6)
 
 ## Dependencies
 
 * Supports Ubuntu 16.04 with ROS Kinetic
-* Robot Operating System ([http://wiki.ros.org/kinetic/Installation/Ubuntu][ROS Installation])
-* sensor_msgs/NavSatFix ([http://wiki.ros.org/sensor_msgs][link])
-* savari_msgs ([https://github.com/zlg9folira/savari_msgs][link])
+* Robot Operating System ([ROS Installation](http://wiki.ros.org/kinetic/Installation/Ubuntu))
+* sensor_msgs/NavSatFix ([ling](http://wiki.ros.org/sensor_msgs))
+* savari_msgs ([link](https://github.com/zlg9folira/savari_msgs))
 
 ## Publishes
 ```sh
