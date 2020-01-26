@@ -17,6 +17,7 @@ The information can be for self vehicle (the OBU which the ROS client node runs 
 </p>
 
 **What is DSRC?**
+
 DSRC is is “a two-way short-to-medium-range wireless communications capability that permits very high data transmission critical in communications-based active safety applications,” according to the U.S. [Department of Transportation’s Intelligent Transportation](https://www.its.dot.gov/factsheets/dsrc_factsheet.htm) Systems Joint Program Office. DSRC is provided with 75 MHz of spectrum around the 5.9 GHz band (5.850-5.925 GHz) band to be used for vehicle-related safety and mobility systems. A number of DSRC applications have been envisioned:
 
 * Collision avoidance
@@ -34,7 +35,7 @@ DSRC is is “a two-way short-to-medium-range wireless communications capability
 
 * Supports Ubuntu 16.04 with ROS Kinetic
 * Robot Operating System ([ROS Installation](http://wiki.ros.org/kinetic/Installation/Ubuntu))
-* sensor_msgs/NavSatFix ([ling](http://wiki.ros.org/sensor_msgs))
+* sensor_msgs/NavSatFix ([link](http://wiki.ros.org/sensor_msgs))
 * savari_msgs ([link](https://github.com/zlg9folira/savari_msgs))
 
 ## Publishes
