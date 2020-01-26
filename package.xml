@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>savari</name>
+  <version>0.0.0</version>
+  <description>SAVARI DSRC ROS DRIVER</description>
+
+  <maintainer email="foadhaji@buffalo.edu">Foad Hajiaghajani</maintainer>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>sensor_msgs</build_depend>
+  <build_depend>savari_msgs</build_depend>
+  <license> TBD </license>
+
+  <exec_depend>roscpp</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
+  <exec_depend>savari_msgs</exec_depend>
+  <!-- The export tag contains other, unspecified, tags -->
+  <export>
+    <!-- Other tools can request additional information be placed here -->
+
+  </export>
+
+
+</package>
