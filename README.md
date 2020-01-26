@@ -1,6 +1,6 @@
-## SAVARI OBU Node
+# SAVARI OBU Node
 
-A ROS driver (server) for SAVARI DSRC on-board-unit (OBU)
+##A ROS driver (server) for SAVARI DSRC on-board-unit (OBU)
 
 This package publishes ROS topics related to the content of basic-safety-messages (BSMs) including:
  
