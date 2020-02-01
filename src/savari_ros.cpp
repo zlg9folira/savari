@@ -105,7 +105,7 @@ public:
 		if (!this->t_out){
 			if (!this->self_gs_ && !this->ego_gs_){
 				fflush(stdout);
-				printf("\r\t\t\tMsg count: %d\t%s[SELF GPS ERR]%s, %s[EGO GPS ERR]%s",c_,red,colend,red,colend);
+				printf("\r\t\t\tMsg count: %d\t%s[SELF GPS ERR]%s\t%s[EGO GPS ERR]%s",c_,red,colend,red,colend);
 				return (c_+1);
 			}else if(!this->self_gs_){
 				fflush(stdout);
@@ -117,7 +117,7 @@ public:
 				return (c_+1);
 			}
 			fflush(stdout);
-			printf("\r\t\t\tMessage count: %d",c_);
+			printf("\r\t\t\tMessage count: %d\t%s[GPS status OK]%s",c_,green,colend);
 		}
 		return (c_+1);
 	}
