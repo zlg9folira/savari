@@ -85,7 +85,9 @@ class savariTCP
 public:
 	int port;
 	int sock_;
-	int t_out = 0;
+	int t_out = 0;		/* timeout */
+	int self_gs_;		/* SELF vehicle gps status [0] off [1] on */
+	int ego_gs_;		/* EGO vehicle gps status [0] off [1] on */
 	struct sockaddr_in serv_addr_;
 
 	int set_port(int p_){
@@ -101,6 +103,19 @@ public:
 
 	int msg_count(int c_){
 		if (!this->t_out){
+			if (!this->self_gs_ && !this->ego_gs_){
+				fflush(stdout);
+				printf("\r\t\t\tMsg count: %d\t%s[SELF GPS ERR]%s, %s[EGO GPS ERR]%s",c_,red,colend,red,colend);
+				return (c_+1);
+			}else if(!this->self_gs_){
+				fflush(stdout);
+				printf("\r\t\t\tMsg count: %d\t%s[SELF GPS ERR]%s",c_,red,colend);
+				return (c_+1);
+			}else if(!this->ego_gs_){
+				fflush(stdout);
+				printf("\r\t\t\tMsg count: %d\t%s[EGO GPS ERR]%s",c_,red,colend);
+				return (c_+1);
+			}
 			fflush(stdout);
 			printf("\r\t\t\tMessage count: %d",c_);
 		}
@@ -268,7 +283,6 @@ int main(int argc, char **argv)
 		else{
 			connfd_ = accept (stcp.sock_,(struct sockaddr *) &stcp.serv_addr_, (socklen_t*)&sizeOfserv_addr);
 			if (connfd_ >= 0) {
-
 				if (!msg_s){
 					printf("%s[CONNECTED]%s\t\tROS topics are generated and advertised!\n",green,colend);
 					msg_s+=1;
@@ -279,21 +293,20 @@ int main(int argc, char **argv)
 				// Transform raw data to numerical format
 				savariNode.payload_dec = {0};
 				savariNode.payload_dec = decode_tcp_payload(savariNode.payload_enc);
-				if (!savariNode.payload_dec.self.gpsstatus && msg_s == 1){
-					printf("%s[SELF GPS ALERT]%s\tSelf vehicle's GPS is OFF\n",red,colend);
-					if (!savariNode.payload_dec.ego.gpsstatus){
-						printf("%s[EGO GPS ALERT]%s\t\tRemote vehicle's GPS is OFF\n",red,colend);
-						msg_s+=1;
-					}
-					msg_s = stcp.do_not_exit(msg_s);
-				}else if (!msg_s){
-					msg_s = stcp.do_not_exit(msg_s);
-				}
+				if (!savariNode.payload_dec.self.gpsstatus)
+					stcp.self_gs_ = 0;
+				else
+					stcp.self_gs_ = 1;
+				if (!savariNode.payload_dec.ego.gpsstatus)
+					stcp.ego_gs_ = 0;
+				else
+					stcp.ego_gs_ = 1;
+
 				// Fill out and publish ROS messages
 				savariNode.fill_ros_msg();
 				savariNode.publish();
 
-				// Print logs
+				//Print logs
 				//printf("%s[BSM INTERVAL]%s\t\t%lf ms\n",white,colend,savariNode.payload_dec.self.bsm_interval);
 				//printf("%s[DISTANCE]%s\t\t%lf meter\n",white,colend,savariNode.payload_dec.self.distance);
 
@@ -312,4 +325,6 @@ int main(int argc, char **argv)
 	return 0;
 }
 
+
 #endif /* ndef _savari_ros */
+
