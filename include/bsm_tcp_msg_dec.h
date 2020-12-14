@@ -1,5 +1,5 @@
 /* `_bsm_tcp_msg_dec.h'
- * 	2019 - Foad Hajiaghajani - foadhaji [at] buffalo.edu
+ * 	2019 - Foad Hajiaghajani - foadhaji [at] buffalo.edu 
  * 	Compiled by and verified on SAVARI SDK v5.10.1.7
  *	Compiled by and verified on C++11-ROS_Kinetic-Ubuntu_16.04 
  *	This header file must be loaded in /savari_ros/include/
@@ -9,7 +9,6 @@
 #define _bsm_tcp_msg_dec
 
 // Numerical struct of BSM and application data .. to be used with connected ROS SOCKET
-// Size:
 typedef struct {
 		double latitude;
 		double longitude;
